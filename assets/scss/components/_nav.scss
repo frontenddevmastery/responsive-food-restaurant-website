@@ -1,0 +1,119 @@
+header {
+    background-color: var(--body-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: background .4s, box-shadow .3s;
+}
+.nav {
+    position: relative;
+    padding: 1.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__logo {
+        font-family: var(--title-font);
+        font-size: var(--nm-font-size);
+        font-weight: var(--font-medium);
+        color: var(--text-color);
+    }
+    &__links__wrapper {
+        align-items: center;
+        column-gap: 2rem;
+    }
+    &__right {
+        font-size: 1.25rem;
+        column-gap: 2rem;
+        color: var(--text-color);
+    }
+    &__links {
+        font-weight: var(--font-medium);
+        padding: 1.5rem;
+        width: 100%;
+        background-color: var(--body-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: var(--box-shadow);
+        transform: translateY(-105%);
+        transition: transform .4s, background .4s;
+        opacity: 0;
+    }
+    &__link {
+        font-size: var(--nm-font-size);
+        display: inline-block;
+        margin: 1rem 0;
+        color: var(--text-color);
+        transition: color .3s;
+
+        &:hover {
+            color: var(--first-color);
+        }
+    }
+    i {
+        cursor: pointer;
+    }
+    .ri-close-line {
+        position: absolute;
+        top: 1.7rem;
+        right: 1.4rem;
+        font-size: var(--h1-font-size);
+    }
+}
+
+
+@media screen and (min-width: 740px) {
+    .nav {
+        .ri-menu-line,
+        .ri-close-line {
+            display: none;
+        }
+        &__right {
+            order: 3;
+        }
+        &__list {
+            display: flex;
+            column-gap: .5rem;
+        }
+        &__links {
+            position: relative;
+            width: max-content;
+            padding: 0;
+            box-shadow: none;
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        &__link {
+            margin: 0 1rem;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        padding: 1.5rem 0rem;
+    }
+}
+
+// show nav
+.show-nav {
+    transform: translateY(0%);
+}
+
+// add light box-shadow to header
+.add-box-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+// add dark box-shadow to header
+// .add-dark-shadow {
+//     box-shadow: 0px 8px 20px hsla(19, 64%, 4%, 0.2);
+// }
+
+// active-link
+.active-link {
+    color: var(--first-color-alt);
+}

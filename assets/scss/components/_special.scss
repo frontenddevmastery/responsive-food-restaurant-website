@@ -1,0 +1,103 @@
+.special {
+    --card-width: 13rem;
+    --card-column-gap: 2rem;
+    &__wrapper {
+        max-width: min-content;
+        margin: auto;
+    }
+    &__title {
+        font-size: var(--h1-font-size);
+        font-weight: var(--font-semi-bold);
+        margin: 1rem auto 0;
+    }
+    &__container {
+        align-items: center;
+        // justify-self: flex-start;
+        margin: 5rem 1rem 0;
+        flex-wrap: wrap;
+        column-gap: var(--card-column-gap);
+        row-gap: 5rem;
+    }
+    &__card {
+        position: relative;
+        width: var(--card-width);
+        position: relative;
+        background-color: var(--container-color);
+        padding: 1.5rem 2rem;
+        border-radius: .7rem;
+        box-shadow: var(--box-shadow);
+        transition: background .4s, box-shadow .4s;
+        overflow: hidden;
+        &:hover img {
+            transform: translateY(-.5rem);
+        }
+    }
+    &__card-img {
+        // position: relative;
+        display: block;
+        margin: auto;
+        width: 128px;
+        height: 128px;
+        fill: var(--first-color);
+        transition: transform .3s;
+    }
+    &__card-title {
+        font-size: var(--nm-font-size);
+        font-weight: var(--font-semi-bold);
+        margin-top: 1rem;
+    }
+    &__card-info, &__card-price {
+        display: block;
+        font-size: var(--sm-font-size);
+        // margin-top: .5rem;
+    }
+    &__card-info {
+        font-weight: var(--font-normal);
+        // margin-top: .1rem;
+    }
+    &__card-price {
+        color: var(--title-color);
+        font-weight: var(--font-semi-bold);
+        margin-top: .5rem;
+    }
+    &__card-rect {
+        position: absolute;
+        padding: .6rem .85rem;
+        font-size: var(--h3-font-size);
+        bottom: 0;
+        right: 0;
+        background: var(--first-color);
+        color: #ffffff;
+        border-radius: .5rem 0 0 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 660px) {
+    .special {
+        &__wrapper {
+            max-width: calc(var(--card-column-gap) + (var(--card-width) * 2 + 2rem));
+        }
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .special {
+        &__container {
+            justify-content: center;
+            margin-top: 3rem;
+            column-gap: 3rem;
+            row-gap: 6rem;
+        }
+        &__wrapper {
+            max-width: 1024px;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    font-size: 16px;
+
+    // Colors
+    --body-color: #FBFEFD;
+    --container-color: #FFFFFF;
+    --title-color: #393939;
+    --first-color: #069c54;
+    --first-color-alt: #048654;
+    --text-color: #707070;
+    --text-color-light: #A6A6A6;
+    --first-color-light: hsla(151, 93%, 32%, .5);
+    --box-shadow: 0 2px 4px rgb(3 74 40 / 15%);
+
+    // font family
+    --body-font: 'Poppins', san-serif;
+    // --title-font: 'Lora', serif;
+    // --info-subtitle-font: 'Dancing Script', cursive;
+
+    // font size
+    --xxl-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --nm-font-size: .938rem;
+    --sm-font-size: .813rem;
+    --x-sm-font-size: .75rem;
+
+    @media screen and (min-width: 1024px){
+        --xxl-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --nm-font-size: 1rem;
+        --sm-font-size: .875rem;
+        --x-sm-font-size: .813rem;
+    }
+
+    // font weight
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+
+

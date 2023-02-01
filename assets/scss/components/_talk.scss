@@ -1,0 +1,67 @@
+.talk {
+    position: relative;
+    
+    &__wrapper {
+        display: block;
+        padding-inline: 1rem;
+    }
+    &__subtitle {
+        font-size: var(--nm-font-size);
+        color: var(--first-color);
+    }
+    &__title {
+        font-size: var(--h1-font-size);
+        font-weight: var(--font-semi-bold);
+        margin: 1rem auto 0;
+    }
+    &__text {
+        max-width: 500px;
+        font-size: var(--nm-font-size);
+        margin: 2rem auto 0 0;
+    }
+    &__img {
+        border-radius: .5rem;
+        width: 100%;
+        max-width: 17rem;
+        height: 15rem;
+        margin: 2rem auto 0;
+    }
+    &__btn {
+        padding: 1rem 1.5rem;
+        margin: 2rem auto 0;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .talk {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // width: 85%;
+            gap: 8rem;
+        }
+
+        &__info {
+            max-width: 525px;
+            text-align: left;
+        }
+        &__text {
+            // max-width: 100%;
+            margin: 1.5rem 0 0;
+        }
+        &__img {
+            display: block;
+            width: 24rem;
+            height: 22rem;
+            margin: 0;
+        }
+        &__btn {
+            margin: 2.5rem 0 0;
+        }
+    }
+    
+}
+

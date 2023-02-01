@@ -1,0 +1,19 @@
+.btn {
+    display: inline-block;
+    width: max-content;
+    text-decoration: none;
+    font-size: var(--nm-font-size);
+    font-weight: var(--font-normal);
+    // padding: 1rem .5rem;
+    background-color: var(--first-color);
+    border-radius: .5rem;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background .4s;
+    &:hover {
+        background-color: var(--first-color-alt);
+    }
+}
+
+

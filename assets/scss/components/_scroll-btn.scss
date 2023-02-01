@@ -1,0 +1,27 @@
+
+.scroll-btn {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    padding: .25rem .5rem;
+    background-color: var(--first-color-light);
+    color: var(--container-color);
+    box-shadow: var(--box-shadow);
+    border-radius: .2rem;
+    // visibility: hidden;
+    opacity: 0;
+    transform: translateY(5rem);
+    z-index: 100;
+    transition: transform ease .3s, opacity ease .3s, background .4s;
+
+    &__icon {
+        color: var(--body-color);
+    }
+}
+
+// hide .scroll-btn
+.show {
+    // visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+}
